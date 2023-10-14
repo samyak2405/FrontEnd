@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.outer{
+    height: 550px;
+    width: 220px;
+    border: 5px solid black;
+    background-color: orange;
+    border-radius: 30px;
+    margin: 10px 0px 0px 500px;
+}
+
+.inner{
+    height: 100px;
+    width: 100px;
+    border:3px solid black;
+    border-radius: 50%;   
+    margin: 20%;
+    padding: 10px;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}

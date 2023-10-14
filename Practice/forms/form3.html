@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Complex form</h1>
+    <form action="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" required>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <label for="gender">Gender</label>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+            <label for="other">Others</label>
+            <input type="radio" name="gender" id="other">
+            <br><br>
+            <label for="country">Country:</label>
+            <select id="country" name="country"></select>
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+            <label for="zipcode">Zip Code</label>
+            <input type="text" id="zipcode" name="zipcode">
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Information</legend>
+            <label for="comments">Comments</label>
+            <br>
+            <textarea name="comments" id="comments" cols="80" rows="20"></textarea>
+            <br>
+            <label for="conditions">I agree to the terms and conditions</label>
+            <input type="checkbox" name="conditions" id="conditions" required>
+            <button>Submit</button>
+        </fieldset>
+
+    </form>
+
+
+    <script>
+        var countrySelect = document.getElementById('country');
+
+        // Fetch the country data from the API
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                // Sort the country names in lexicographical order
+                var sortedCountries = data
+                    .map(country => country.name.common)
+                    .sort();
+
+                // Iterate over the sorted country names and create options
+                sortedCountries.forEach(countryName => {
+                    var option = document.createElement('option');
+                    option.value = countryName;
+                    option.textContent = countryName;
+                    countrySelect.appendChild(option);
+                });
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+
+</html>

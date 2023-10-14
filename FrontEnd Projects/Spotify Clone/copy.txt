@@ -1,0 +1,5 @@
+font-family: 'Poppins','Ubuntu', sans-serif;
+
+Normal: <i class="fa-regular fa-play" style="color: #29c926;"></i>
+Fade: <i class="fa-regular fa-play fa-fade" style="color: #29c926;"></i>
+Beat Fade: <i class="fa-regular fa-play fa-beat-fade" style="color: #29c926;"></i>

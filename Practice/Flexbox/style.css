@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:black;
+}
+
+h1{
+    color: blue;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.container a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    color: pink;
+}
+
+.container1{
+    color: pink;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid blue;
+}
+
+.container1 innerDiv{
+    height: 200px;
+    width: 200px;
+}

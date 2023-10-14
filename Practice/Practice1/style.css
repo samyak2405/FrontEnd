@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    height: 300px;
+    width: 300px;
+    position:fixed;
+    top: 50px;
+    right: 0px;
+    background-image: url("nature1.jpg");
+    background-size: cover;
+}
